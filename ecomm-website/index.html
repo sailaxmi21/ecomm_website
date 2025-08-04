@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Thrift-Flip Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 25px 30px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.icons a:hover {
+    color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+    background: url('logo.png') no-repeat center center/cover;
+    height: 80vh;
+    width: 100%;
+    padding: 0px;
+    margin:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size:cover;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.products h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    width: 220px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Subscription Section */
+.subscribe {
+    text-align: center;
+    padding: 40px;
+    background: black;
+    color: white;
+}
+
+.subscribe form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe button {
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.contact, .about, .store-info {
+    width: 30%;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.contact button {
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.about h3{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.about ul li {
+    margin-bottom: 5px;
+}
+
+.about ul li a {
+    color: white;
+    text-decoration: none;
+}
+.store-info{
+    text-align:end ;
+}
+.store-info h3{
+    text-align: end;
+}
+
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Anchor Links */
+#men-collection, #women-collection {
+    padding-top: 60px;
+}
+
+/* Navbar Links */
+nav ul li a[href="#men-collection"] {
+    cursor: pointer;
+}
+
+nav ul li a[href="#women-collection"] {
+    cursor: pointer;
+}
+</style>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">The Thrift-Flip_Store</div>
+        <nav>
+            <ul>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Arrivals</h1>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="product">
+            <img src="men1.png" alt="Ripped Skinny Jeans">
+            <h3>Ripped Skinny Jeans</h3>
+            <p><strong>Rs. 2400</strong></p>
+        </div>
+        <div class="product">
+            <img src="men2.png" alt="Mega Ripped Jeans">
+            <h3>Mega Ripped Jeans</h3>
+            <p><strong>Rs. 1999</strong></p>
+        </div>
+        <div class="product">
+            <img src="men3.png" alt="Washed Skinny Jeans">
+            <h3>Washed Skinny Jeans</h3>
+            <p><strong>Rs. 2000</strong></p>
+        </div>
+        <div class="product">
+            <img src="men4.png" alt="Vintage Skinny Jeans">
+            <h3>Vintage Skinny Jeans</h3>
+            <p><strong>Rs. 1500</strong></p>
+        </div>
+        <div class="product">
+            <img src="men5.png" alt="Classic Denim Jeans">
+            <h3>Classic Denim Jeans</h3>
+            <p><strong>Rs. 1800</strong></p>
+        </div>
+        <div class="product">
+            <img src="thrift6.png" alt="Classic Denim Jeans">
+            <h3>Classic Denim Jeans</h3>
+            <p><strong>Rs. 1800</strong></p>
+        </div>
+        <div class="product">
+            <img src="thrift7.png" alt="Classic Denim Jeans">
+            <h3>Royal cloth Jeans</h3>
+            <p><strong>Rs. 1900</strong></p>
+        </div>
+        <div class="product">
+            <img src="thrift8.png" alt="Classic Denim Jeans">
+            <h3>Classic cotton Jeans</h3>
+            <p><strong>Rs. 2000</strong></p>
+        </div>
+        <div class="product">
+            <img src="thrift9.png" alt="Classic Denim Jeans">
+            <h3>Drift Wood Jeans</h3>
+            <p><strong>Rs. 3000</strong></p>
+        </div>
+        <div class="product">
+            <img src="thrift10.png" alt="Classic Denim Jeans">
+            <h3>Torriod Jeans</h3>
+            <p><strong>Rs. 4000</strong></p>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscribe">
+        <h2>Subscribe</h2>
+        <p>To get special offers and VIP treatment:</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact">
+            <h3>Contact</h3>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="about">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">We're Hiring</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Find Store</a></li>
+                <li><a href="#">Shipment</a></li>
+                <li><a href="#">Return Policy</a></li>
+            </ul>
+        </div>
+        <div class="store-info">
+            <h3>The Thrift-Flip-Store</h3>
+            <p>India, Assam</p>
+            <p>📞 8011307741</p>
+            <p>✉ sudeepacahrjeegp@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
